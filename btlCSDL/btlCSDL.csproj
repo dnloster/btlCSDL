@@ -74,7 +74,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomParameter.cs" />
     <Compile Include="DataConnection.cs" />
     <Compile Include="FluentDesignForm1.cs">
       <SubType>Form</SubType>

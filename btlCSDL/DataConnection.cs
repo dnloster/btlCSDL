@@ -5,97 +5,103 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DevExpress.XtraEditors;
 using System.Windows.Forms;
 
 namespace btlCSDL
 {
      public class DataConnection
      {
-          private string connetionString = @"Data Source=DESKTOP-LDF85Q4\DUCNGUYEN;Initial Catalog=quanlytiemchung;Integrated Security=True";
-          private SqlConnection conn;
-          private DataTable dt;
-          private SqlCommand cmd;
-          public DataConnection()
+          //Tạo kết nối CSDL
+          private static SqlConnection conn;
+          private static void openConnection()
           {
                try
                {
-                    conn = new SqlConnection(connetionString);
-               }
-               catch (Exception ex)
-               {
-                    MessageBox.Show("connected failed: " + ex.Message);
-               }
-          }
-          public DataTable SelectData(string sql, List<CustomParameter> lstPara)
-          {
-               try
-               {
-                    conn.Open();
-                    cmd = new SqlCommand(sql, conn);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    foreach (var para in lstPara)
+                    string connectionString = @"Data Source=DESKTOP-CMO84O2\THAIAN;Initial Catalog=StudentManagement;Integrated Security=True";
+                    if (conn == null)
                     {
-                         cmd.Parameters.AddWithValue(para.key, para.value);
+                         conn = new SqlConnection(connectionString);
                     }
-                    dt = new DataTable();
-                    dt.Load(cmd.ExecuteReader());
-                    return dt;
+                    if (conn.State != ConnectionState.Open) conn.Open();
                }
-               catch (Exception ex)
+               catch (Exception)
                {
-                    MessageBox.Show("Lỗi load dữ liệu: " + ex.Message);
-                    return null;
-               }
-               finally
-               {
-                    conn.Close();
+                    XtraMessageBox.Show("Kết nối với CSDL thất bại.", "ERROR");
                }
           }
-          public DataRow Select(string sql)
+          //Ngắt kết nối
+          private static void closeConnection()
           {
-               try
-               {
-                    conn.Open();
-                    cmd = new SqlCommand(sql, conn);
-                    dt = new DataTable();
-                    dt.Load(cmd.ExecuteReader());
-                    return dt.Rows[0];
-               }
-               catch (Exception ex)
-               {
-                    MessageBox.Show("Lỗi load thông tin chi tiết: " + ex.Message);
-                    return null;
-               }
-               finally
+               if (conn == null) return;
+               else if (conn.State == ConnectionState.Open)
                {
                     conn.Close();
                }
           }
+          //Hàm chứa tên thủ tục và danh sách tham số
+          private static SqlCommand buildCommand(string procedureName, SqlParameter[] sqlParameters)
+          {
+               SqlCommand cmd = new SqlCommand
+               {
+                    CommandText = procedureName,
+                    Connection = conn,
+                    CommandType = CommandType.StoredProcedure
 
-          public int ExeCute(string sql, List<CustomParameter> lstPara)
+               };
+               foreach (var sqlParameter in sqlParameters)
+               {
+                    cmd.Parameters.Add(sqlParameter);
+               }
+               return cmd;
+          }
+          private static SqlCommand buildIntCommand(string procedureName, SqlParameter[] sqlParameters)
+          {
+               var cmd = buildCommand(procedureName, sqlParameters);
+               cmd.Parameters.Add(new SqlParameter("ReturnValue", SqlDbType.Int, 4, ParameterDirection.ReturnValue,
+                    false, 0, 0, string.Empty, DataRowVersion.Default, null));
+               return cmd;
+          }
+          //Hàm thực thi thủ tục và trả về số dòng đã thực hiện(thành công >0)\
+          //Hàm này sử dụng khi thêm và xoá
+          public static int ExecuteNonQuery(string proceduceName, SqlParameter[] parameters)
+          {
+               openConnection();
+               var cmd = buildCommand(proceduceName, parameters);
+               cmd.CommandType = CommandType.StoredProcedure;
+               var rec = cmd.ExecuteNonQuery();
+               closeConnection();
+               return rec;
+          }
+          //Hàm thuc thi thủ tục và trả về 1 datatable
+          public static DataTable ExecuteQuery(string proceduceName, SqlParameter[] parameters)
+          {
+               openConnection();
+               using (var sqlDa = new SqlDataAdapter(buildCommand(proceduceName, parameters)))
+               {
+                    using (var ds = new DataSet())
+                    {
+                         sqlDa.Fill(ds);
+                         closeConnection();
+                         return ds.Tables[0];
+                    }
+               }
+          }
+          public static int ExecuteIntCommand(string procedureName, SqlParameter[] parameters)
           {
                try
                {
-                    //cần sửa lại hàm execute như sau
-                    //string sql,List<CustomParameter> lstPara là tham số truyền vào 
-                    conn.Open();
-                    cmd = new SqlCommand(sql, conn);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    foreach (var p in lstPara)
-                    {
-                         cmd.Parameters.AddWithValue(p.key, p.value);
-                    }
-                    var rs = cmd.ExecuteNonQuery();
-                    return (int)rs;
+                    openConnection();
+                    var cmd = buildIntCommand(procedureName, parameters);
+                    cmd.ExecuteNonQuery();
+                    var rec = (int)cmd.Parameters["ReturnValue"].Value;
+                    closeConnection();
+                    return rec;
                }
-               catch (Exception ex)
+               catch (Exception)
                {
-                    MessageBox.Show("Lỗi thực thi câu lệnh: " + ex.Message);
-                    return -100;
-               }
-               finally
-               {
-                    conn.Close();
+                    XtraMessageBox.Show("Không thể thực thi.", "LỖI");
+                    return -1;
                }
           }
      }
