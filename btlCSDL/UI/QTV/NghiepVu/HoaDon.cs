@@ -36,7 +36,7 @@ namespace btlCSDL.UI.QTV.NghiepVu
         }
 
         //private void btnXem_Click(object sender, EventArgs e)
-        // {
+        
         
 
 
