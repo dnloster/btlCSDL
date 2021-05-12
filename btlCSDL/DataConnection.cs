@@ -18,12 +18,13 @@ namespace btlCSDL
           {
                try
                {
-                    string connectionString = @"Data Source=DESKTOP-CMO84O2\THAIAN;Initial Catalog=StudentManagement;Integrated Security=True";
+                    string connectionString = @"Data Source=DESKTOP-LDF85Q4\DUCNGUYEN;Initial Catalog=quanlytiemchung;Integrated Security=True";
                     if (conn == null)
                     {
                          conn = new SqlConnection(connectionString);
                     }
-                    if (conn.State != ConnectionState.Open) conn.Open();
+                    if (conn.State != ConnectionState.Open)
+                         conn.Open();
                }
                catch (Exception)
                {

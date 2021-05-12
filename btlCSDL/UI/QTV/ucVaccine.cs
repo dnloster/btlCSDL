@@ -17,5 +17,15 @@ namespace btlCSDL.UI.QTV
           {
                InitializeComponent();
           }
+          private static ucVaccine _instance;
+          public static ucVaccine Instance
+          {
+               get
+               {
+                    if (_instance == null)
+                         _instance = new ucVaccine();
+                    return _instance;
+               }
+          }
      }
 }

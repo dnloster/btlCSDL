@@ -18,6 +18,7 @@ namespace btlCSDL
           public FluentDesignForm2()
           {
                InitializeComponent();
+               this.OptionsAdaptiveLayout.AdaptiveLayout = false;
           }
           async Task LoadModuleAsync(ModuleInfo module)
           {
@@ -110,9 +111,17 @@ namespace btlCSDL
           private async void accordionControlElement13_Click(object sender, EventArgs e)
           {
                this.itemNav.Caption = $"{accordionControlElement13.Text}";
-               if (ModulesInfo.GetItem("ucVaccine") == null)
-                    ModulesInfo.Add(new ModuleInfo("ucVaccine", "btlCSDL.UI.QTV.ucVaccine"));
-               await LoadModuleAsync(ModulesInfo.GetItem("ucVaccine"));
+               //if (ModulesInfo.GetItem("ucVaccine") == null)
+               //     ModulesInfo.Add(new ModuleInfo("ucVaccine", "btlCSDL.UI.QTV.ucVaccine"));
+               //await LoadModuleAsync(ModulesInfo.GetItem("ucVaccine"));
+               if (!fluentDesignFormContainer1.Controls.Contains(ucVaccine.Instance))
+               {
+                    fluentDesignFormContainer1.Controls.Add(ucVaccine.Instance);
+                    ucVaccine.Instance.Dock = DockStyle.Fill;
+                    ucVaccine.Instance.BringToFront();
+               }
+               else
+                    ucVaccine.Instance.BringToFront();
           }
 
           private async void aCKTSK_Click(object sender, EventArgs e)

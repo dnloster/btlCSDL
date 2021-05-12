@@ -491,6 +491,7 @@
                this.Controls.Add(this.btnThem);
                this.Name = "PhieuKTSK";
                this.Size = new System.Drawing.Size(981, 734);
+               this.Load += new System.EventHandler(this.PhieuKTSK_Load);
                ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBS)).EndInit();
                ((System.ComponentModel.ISupportInitialize)(this.dTNgayKT)).EndInit();
                this.ResumeLayout(false);
