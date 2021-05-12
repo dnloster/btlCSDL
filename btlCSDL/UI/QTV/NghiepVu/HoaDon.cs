@@ -13,9 +13,41 @@ namespace btlCSDL.UI.QTV.NghiepVu
 {
      public partial class HoaDon : DevExpress.DXperience.Demos.TutorialControlBase   
      {
-          public HoaDon()
+
+        HoaDonEntities db = new HoaDonEntities();
+        public HoaDon()
           {
                InitializeComponent();
+               LoadData();
           }
-     }
+        void LoadData()
+        {
+            dataGridViewHD.DataSource = db.HOADONs.ToList();
+        }
+
+        void ThemHoaDon()
+        {
+            db.HOADONs.Add(new HOADON() { });
+            db.SaveChanges();
+        }
+        void SuaHoaDon()
+        {
+
+        }
+
+        //private void btnXem_Click(object sender, EventArgs e)
+        // {
+        //     LoadData();
+
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            ThemHoaDon();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            SuaHoaDon();
+        }
+    }
 }
