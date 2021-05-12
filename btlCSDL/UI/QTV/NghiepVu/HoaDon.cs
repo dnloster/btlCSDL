@@ -11,7 +11,7 @@ using DevExpress.XtraEditors;
 
 namespace btlCSDL.UI.QTV.NghiepVu
 {
-     public partial class HoaDon : DevExpress.DXperience.Demos.TutorialControlBase   //sadfdsf
+     public partial class HoaDon : DevExpress.DXperience.Demos.TutorialControlBase   
      {
           public HoaDon()
           {
