@@ -34,20 +34,20 @@
             this.btnSua = new DevComponents.DotNetBar.ButtonX();
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.dataGridViewHD = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.MaHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaPT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dTNgayTT = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.panelEx8 = new DevComponents.DotNetBar.PanelEx();
-            this.txtThanhTien = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtTongTien = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.panelEx7 = new DevComponents.DotNetBar.PanelEx();
             this.panelEx5 = new DevComponents.DotNetBar.PanelEx();
             this.txtMaPT = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
             this.txtMaHD = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.btnXuatHD = new DevComponents.DotNetBar.ButtonX();
-            this.MaHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaPT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dTNgayTT)).BeginInit();
             this.SuspendLayout();
@@ -131,6 +131,31 @@
             this.dataGridViewHD.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewHD.Size = new System.Drawing.Size(668, 688);
             this.dataGridViewHD.TabIndex = 123;
+            this.dataGridViewHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHD_CellClick);
+            // 
+            // MaHD
+            // 
+            this.MaHD.DataPropertyName = "MaHD";
+            this.MaHD.HeaderText = "Mã hoá đơn";
+            this.MaHD.Name = "MaHD";
+            // 
+            // MaPT
+            // 
+            this.MaPT.DataPropertyName = "MaPT";
+            this.MaPT.HeaderText = "Mã phiếu tiêm";
+            this.MaPT.Name = "MaPT";
+            // 
+            // TongTien
+            // 
+            this.TongTien.DataPropertyName = "TongTien";
+            this.TongTien.HeaderText = "Tổng tiền";
+            this.TongTien.Name = "TongTien";
+            // 
+            // NgayTT
+            // 
+            this.NgayTT.DataPropertyName = "NgayTT";
+            this.NgayTT.HeaderText = "Ngày thanh toán";
+            this.NgayTT.Name = "NgayTT";
             // 
             // dTNgayTT
             // 
@@ -213,25 +238,25 @@
             this.panelEx8.TabIndex = 159;
             this.panelEx8.Text = "panelEx8";
             // 
-            // txtThanhTien
+            // txtTongTien
             // 
-            this.txtThanhTien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.txtTongTien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             // 
             // 
             // 
-            this.txtThanhTien.Border.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.txtThanhTien.Border.Class = "TextBoxBorder";
-            this.txtThanhTien.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtThanhTien.DisabledBackColor = System.Drawing.Color.White;
-            this.txtThanhTien.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThanhTien.Location = new System.Drawing.Point(692, 263);
-            this.txtThanhTien.Multiline = true;
-            this.txtThanhTien.Name = "txtThanhTien";
-            this.txtThanhTien.PreventEnterBeep = true;
-            this.txtThanhTien.Size = new System.Drawing.Size(264, 26);
-            this.txtThanhTien.TabIndex = 158;
-            this.txtThanhTien.WatermarkFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThanhTien.WatermarkText = "Thành tiền";
+            this.txtTongTien.Border.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.txtTongTien.Border.Class = "TextBoxBorder";
+            this.txtTongTien.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTongTien.DisabledBackColor = System.Drawing.Color.White;
+            this.txtTongTien.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTongTien.Location = new System.Drawing.Point(692, 263);
+            this.txtTongTien.Multiline = true;
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.PreventEnterBeep = true;
+            this.txtTongTien.Size = new System.Drawing.Size(264, 26);
+            this.txtTongTien.TabIndex = 158;
+            this.txtTongTien.WatermarkFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTongTien.WatermarkText = "Tổng tiền";
             // 
             // panelEx7
             // 
@@ -341,30 +366,6 @@
             this.btnXuatHD.TabIndex = 164;
             this.btnXuatHD.Text = "Xuất hoá đơn";
             // 
-            // MaHD
-            // 
-            this.MaHD.DataPropertyName = "MaHD";
-            this.MaHD.HeaderText = "Mã hoá đơn";
-            this.MaHD.Name = "MaHD";
-            // 
-            // MaPT
-            // 
-            this.MaPT.DataPropertyName = "MaPT";
-            this.MaPT.HeaderText = "Mã phiếu tiêm";
-            this.MaPT.Name = "MaPT";
-            // 
-            // TongTien
-            // 
-            this.TongTien.DataPropertyName = "TongTien";
-            this.TongTien.HeaderText = "Tổng tiền";
-            this.TongTien.Name = "TongTien";
-            // 
-            // NgayTT
-            // 
-            this.NgayTT.DataPropertyName = "NgayTT";
-            this.NgayTT.HeaderText = "Ngày thanh toán";
-            this.NgayTT.Name = "NgayTT";
-            // 
             // HoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -373,7 +374,7 @@
             this.Controls.Add(this.dTNgayTT);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.panelEx8);
-            this.Controls.Add(this.txtThanhTien);
+            this.Controls.Add(this.txtTongTien);
             this.Controls.Add(this.panelEx7);
             this.Controls.Add(this.panelEx5);
             this.Controls.Add(this.txtMaPT);
@@ -400,7 +401,7 @@
           private DevComponents.Editors.DateTimeAdv.DateTimeInput dTNgayTT;
           private DevComponents.DotNetBar.LabelX labelX2;
           private DevComponents.DotNetBar.PanelEx panelEx8;
-          private DevComponents.DotNetBar.Controls.TextBoxX txtThanhTien;
+          private DevComponents.DotNetBar.Controls.TextBoxX txtTongTien;
           private DevComponents.DotNetBar.PanelEx panelEx7;
           private DevComponents.DotNetBar.PanelEx panelEx5;
           private DevComponents.DotNetBar.Controls.TextBoxX txtMaPT;

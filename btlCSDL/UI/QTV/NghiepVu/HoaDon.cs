@@ -34,12 +34,7 @@ namespace btlCSDL.UI.QTV.NghiepVu
         {
 
         }
-
-        //private void btnXem_Click(object sender, EventArgs e)
         
-        
-
-
         private void btnThem_Click(object sender, EventArgs e)
         {
             ThemHoaDon();
@@ -48,6 +43,20 @@ namespace btlCSDL.UI.QTV.NghiepVu
         private void btnSua_Click(object sender, EventArgs e)
         {
             SuaHoaDon();
+        }
+
+        private void dataGridViewHD_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = e.RowIndex;
+            if (i >= 0)
+            {
+                DataGridViewRow row = dataGridViewHD.Rows[i];
+                txtMaHD.Text = row.Cells[0].Value.ToString();
+                txtMaPT.Text = row.Cells[3].Value.ToString();
+                txtTongTien.Text = row.Cells[1].Value.ToString();
+                dTNgayTT.Value = Convert.ToDateTime(row.Cells[2].Value.ToString());
+                
+            }
         }
     }
 }
