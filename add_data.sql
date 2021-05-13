@@ -184,3 +184,18 @@ VALUES
 ('HD003',250000,'2021-03-24','PT003'),
 ('HD004',750000,'2021-01-24','PT004'),
 ('HD005',750000,'2021-02-22','PT005')
+
+INSERT INTO dbo.PHIEUKTSK
+(
+    MAPHIEUKTSK,
+    NGAYKT,
+    NOIDUNG,
+    MAKH,
+	MABS
+)
+VALUES
+('KT001', '2021-02-22', 'Kiểm tra tim mạch', 'KH001', 'BS001'),
+('KT002', '2021-02-22', 'Kiểm tra huyết áp', 'KH002', 'BS002'),
+('KT003', '2021-02-22', 'Kiểm tra hệ thống miễn dịch', 'KH003', 'BS003'),
+('KT004', '2021-02-22', 'Kiểm tra hệ thần kinh', 'KH004', 'BS004'),
+('KT005', '2021-02-22', 'Kiểm tra máu', 'KH005', 'BS005')
