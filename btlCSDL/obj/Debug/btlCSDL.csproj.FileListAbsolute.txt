@@ -444,3 +444,5 @@ C:\Users\Laptop88\Desktop\btlCSDL\btlCSDL\obj\Debug\btlCSDL.csproj.CoreCompileIn
 C:\Users\Laptop88\Desktop\btlCSDL\btlCSDL\obj\Debug\btlCSDL.csproj.CopyComplete
 C:\Users\Laptop88\Desktop\btlCSDL\btlCSDL\obj\Debug\btlCSDL.exe
 C:\Users\Laptop88\Desktop\btlCSDL\btlCSDL\obj\Debug\btlCSDL.pdb
+C:\Users\ducva\Desktop\btlCSDL\btlCSDL\bin\Debug\EntityFramework.dll
+C:\Users\ducva\Desktop\btlCSDL\btlCSDL\bin\Debug\EntityFramework.xml

@@ -21,7 +21,7 @@ namespace btlCSDL.UI.QTV.NghiepVu
           
           private void PhieuKTSK_Load(object sender, EventArgs e)
           {
-             
+
                
           }
      }
