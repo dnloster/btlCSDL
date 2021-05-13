@@ -444,3 +444,6 @@ C:\Users\Laptop88\Desktop\btlCSDL\btlCSDL\obj\Debug\btlCSDL.csproj.CoreCompileIn
 C:\Users\Laptop88\Desktop\btlCSDL\btlCSDL\obj\Debug\btlCSDL.csproj.CopyComplete
 C:\Users\Laptop88\Desktop\btlCSDL\btlCSDL\obj\Debug\btlCSDL.exe
 C:\Users\Laptop88\Desktop\btlCSDL\btlCSDL\obj\Debug\btlCSDL.pdb
+C:\Users\Laptop88\Desktop\btlCSDL\btlCSDL\obj\Debug\btlCSDL.FormThêmHD.resources
+C:\Users\Laptop88\Desktop\btlCSDL\btlCSDL\obj\Debug\RdlCompile.cache
+C:\Users\Laptop88\Desktop\btlCSDL\btlCSDL\obj\Debug\RdlCompile.compiled
