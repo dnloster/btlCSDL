@@ -23,7 +23,7 @@ namespace btlCSDL
           {
                Application.EnableVisualStyles();
                Application.SetCompatibleTextRenderingDefault(false);
-               Application.Run(new FluentDesignForm2());
+               Application.Run(new FluentDesignForm1());
           }
      }
 }

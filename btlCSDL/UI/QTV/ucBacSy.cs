@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using static btlCSDL.DataConnection;
 
 namespace btlCSDL.UI.QTV
 {
@@ -20,7 +21,9 @@ namespace btlCSDL.UI.QTV
 
           private void ucBacSy_Load(object sender, EventArgs e)
           {
-          }
+            dataGridViewBS.DataSource = null;
+            dataGridViewBS.DataSource = ExecuteQuery("Show_BSALL_TTTC").Copy();
+        }
           //public string MaBS { get; set; }
           //public string HoBS { get; set; }
           //public string TenBS { get; set; }

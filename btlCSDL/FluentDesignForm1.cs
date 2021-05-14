@@ -63,12 +63,12 @@ namespace btlCSDL
                });
           }
 
-          private async void aCDKTiem_Click(object sender, EventArgs e)
+          private async void aCXemHD_Click(object sender, EventArgs e)
           {
                this.itemNav.Caption = $"{aCXemHD.Text}";
-               if (ModulesInfo.GetItem("XemHD") == null)
-                    ModulesInfo.Add(new ModuleInfo("XemHD", "btlCSDL.UI.Khach.XemHD"));
-               await LoadModuleAsync(ModulesInfo.GetItem("XemHD"));
+               if (ModulesInfo.GetItem("ucXemHD") == null)
+                    ModulesInfo.Add(new ModuleInfo("ucXemHD", "btlCSDL.UI.Khach.ucXemHD"));
+               await LoadModuleAsync(ModulesInfo.GetItem("ucXemHD"));
           }
           private async void aCTrangchu_Click(object sender, EventArgs e)
           {

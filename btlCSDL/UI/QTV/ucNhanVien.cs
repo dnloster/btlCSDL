@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-
+using static btlCSDL.DataConnection;
 namespace btlCSDL.UI.QTV
 {
      public partial class ucNhanVien : DevExpress.DXperience.Demos.TutorialControlBase //DevExpress.XtraEditors.XtraUserControl
@@ -17,5 +17,11 @@ namespace btlCSDL.UI.QTV
           {
                InitializeComponent();
           }
-     }
+
+        private void ucNhanVien_Load(object sender, EventArgs e)
+        {
+            dataGridViewNV.DataSource = null;
+            dataGridViewNV.DataSource = ExecuteQuery("Show_NV_TTTC").Copy();
+        }
+    }
 }
