@@ -22,14 +22,36 @@ namespace btlCSDL.UI.QTV
           private void ucBacSy_Load(object sender, EventArgs e)
           {
             dataGridViewBS.DataSource = null;
-            dataGridViewBS.DataSource = ExecuteQuery("Show_BSALL_TTTC").Copy();
-        }
-          //public string MaBS { get; set; }
-          //public string HoBS { get; set; }
-          //public string TenBS { get; set; }
-          //public string DiachiBS { get; set; }
-          //public string GTBS { get; set; }
-          //public DateTime NSBS { get; set; }
-          //public char SDTBS { get; set; }
+            dataGridViewBS.DataSource = ExecuteQuery("Show_WorkingBS_TTTC").Copy();
+          }
+
+          string mabs;
+          private void dataGridViewBS_CellClick(object sender, DataGridViewCellEventArgs e)
+          {
+               int index = e.RowIndex;
+               if(index >= 0)
+               {
+                    try
+                    {
+                         mabs = dataGridViewBS.Rows[index].Cells["MaBS"].Value.ToString();
+                         txtMaBS.Text = dataGridViewBS.Rows[index].Cells["MaBS"].Value.ToString();
+                         txtHoBS.Text = dataGridViewBS.Rows[index].Cells["HoBS"].Value.ToString();
+                         txtTenBS.Text = dataGridViewBS.Rows[index].Cells["TenBS"].Value.ToString();
+                         txtDiaChiBS.Text = dataGridViewBS.Rows[index].Cells["DiaChiBS"].Value.ToString();
+                         rGGTBS.Text = dataGridViewBS.Rows[index].Cells["GTBS"].Value.ToString();
+                         dTNSBS.Text = dataGridViewBS.Rows[index].Cells["NSBS"].Value.ToString();
+                         txtSDTBS.Text = dataGridViewBS.Rows[index].Cells["SDTBS"].Value.ToString();
+                    }
+                    catch(Exception ex)
+                    {
+                         txtMaBS.Clear();
+                         txtHoBS.Clear();
+                         txtTenBS.Clear();
+                         txtDiaChiBS.Clear();
+                         txtSDTBS.Clear();
+                         rGGTBS.Reset();
+                    }
+               }
+          }
      }
 }

@@ -132,9 +132,9 @@ namespace btlCSDL
           private async void accordionControlElement4_Click(object sender, EventArgs e)
           {
                this.itemNav.Caption = $"{accordionControlElement8.Text}";
-               if (ModulesInfo.GetItem("ucRetireBacSy") == null)
-                    ModulesInfo.Add(new ModuleInfo("ucRetireBacSy", "btlCSDL.UI.QTV.ucRetireBacSy"));
-               await LoadModuleAsync(ModulesInfo.GetItem("ucRetireBacSy"));
+               if (ModulesInfo.GetItem("ucRetireBS") == null)
+                    ModulesInfo.Add(new ModuleInfo("ucRetireBS", "btlCSDL.UI.QTV.ucRetireBS"));
+               await LoadModuleAsync(ModulesInfo.GetItem("ucRetireBS"));
           }
 
           private async void accordionControlElement9_Click(object sender, EventArgs e)

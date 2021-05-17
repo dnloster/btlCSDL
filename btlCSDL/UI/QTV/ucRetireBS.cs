@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using static btlCSDL.DataConnection;
 
 namespace btlCSDL.UI.QTV
 {
@@ -16,6 +17,12 @@ namespace btlCSDL.UI.QTV
           public ucRetireBS()
           {
                InitializeComponent();
+          }
+
+          private void ucRetireBS_Load(object sender, EventArgs e)
+          {
+               dataGridViewRetireBS.DataSource = null;
+               dataGridViewRetireBS.DataSource = ExecuteQuery("Show_RetireNV_TTTC").Copy();
           }
      }
 }

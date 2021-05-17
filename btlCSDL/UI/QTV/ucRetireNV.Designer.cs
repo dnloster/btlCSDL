@@ -30,14 +30,7 @@
           {
                System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
                this.btnThem = new DevComponents.DotNetBar.ButtonX();
-               this.SDTNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-               this.NSNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-               this.GTNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-               this.dataGridViewNV = new DevComponents.DotNetBar.Controls.DataGridViewX();
-               this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-               this.HoNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-               this.TenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-               this.DiaChiNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+               this.dataGridViewRetireNV = new DevComponents.DotNetBar.Controls.DataGridViewX();
                this.panelEx8 = new DevComponents.DotNetBar.PanelEx();
                this.btnXoa = new DevComponents.DotNetBar.ButtonX();
                this.btnSua = new DevComponents.DotNetBar.ButtonX();
@@ -57,7 +50,7 @@
                this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
                this.txtMaNV = new DevComponents.DotNetBar.Controls.TextBoxX();
                this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
-               ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNV)).BeginInit();
+               ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRetireNV)).BeginInit();
                ((System.ComponentModel.ISupportInitialize)(this.dTNSNV)).BeginInit();
                ((System.ComponentModel.ISupportInitialize)(this.rGGTNV.Properties)).BeginInit();
                this.SuspendLayout();
@@ -76,38 +69,12 @@
                this.btnThem.TabIndex = 204;
                this.btnThem.Text = "Thêm";
                // 
-               // SDTNV
+               // dataGridViewRetireNV
                // 
-               this.SDTNV.DataPropertyName = "SDTNV";
-               this.SDTNV.HeaderText = "Số điện thoại";
-               this.SDTNV.Name = "SDTNV";
-               // 
-               // NSNV
-               // 
-               this.NSNV.DataPropertyName = "NSNV";
-               this.NSNV.HeaderText = "Ngày sinh";
-               this.NSNV.Name = "NSNV";
-               // 
-               // GTNV
-               // 
-               this.GTNV.DataPropertyName = "GTNV";
-               this.GTNV.HeaderText = "Giới tính";
-               this.GTNV.Name = "GTNV";
-               // 
-               // dataGridViewNV
-               // 
-               this.dataGridViewNV.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-               this.dataGridViewNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-               this.dataGridViewNV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-               this.dataGridViewNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-               this.dataGridViewNV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaNV,
-            this.HoNV,
-            this.TenNV,
-            this.DiaChiNV,
-            this.GTNV,
-            this.NSNV,
-            this.SDTNV});
+               this.dataGridViewRetireNV.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+               this.dataGridViewRetireNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+               this.dataGridViewRetireNV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+               this.dataGridViewRetireNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
                dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
                dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
                dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 8.25F);
@@ -115,36 +82,12 @@
                dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
                dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
                dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-               this.dataGridViewNV.DefaultCellStyle = dataGridViewCellStyle1;
-               this.dataGridViewNV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-               this.dataGridViewNV.Location = new System.Drawing.Point(0, 46);
-               this.dataGridViewNV.Name = "dataGridViewNV";
-               this.dataGridViewNV.Size = new System.Drawing.Size(676, 688);
-               this.dataGridViewNV.TabIndex = 203;
-               // 
-               // MaNV
-               // 
-               this.MaNV.DataPropertyName = "MANV";
-               this.MaNV.HeaderText = "Mã nhân viên";
-               this.MaNV.Name = "MaNV";
-               // 
-               // HoNV
-               // 
-               this.HoNV.DataPropertyName = "HONV";
-               this.HoNV.HeaderText = "Họ";
-               this.HoNV.Name = "HoNV";
-               // 
-               // TenNV
-               // 
-               this.TenNV.DataPropertyName = "TENNV";
-               this.TenNV.HeaderText = "Tên";
-               this.TenNV.Name = "TenNV";
-               // 
-               // DiaChiNV
-               // 
-               this.DiaChiNV.DataPropertyName = "DIACHINV";
-               this.DiaChiNV.HeaderText = "Địa chỉ";
-               this.DiaChiNV.Name = "DiaChiNV";
+               this.dataGridViewRetireNV.DefaultCellStyle = dataGridViewCellStyle1;
+               this.dataGridViewRetireNV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+               this.dataGridViewRetireNV.Location = new System.Drawing.Point(0, 46);
+               this.dataGridViewRetireNV.Name = "dataGridViewRetireNV";
+               this.dataGridViewRetireNV.Size = new System.Drawing.Size(676, 688);
+               this.dataGridViewRetireNV.TabIndex = 203;
                // 
                // panelEx8
                // 
@@ -513,7 +456,7 @@
                this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
                this.Controls.Add(this.btnThem);
-               this.Controls.Add(this.dataGridViewNV);
+               this.Controls.Add(this.dataGridViewRetireNV);
                this.Controls.Add(this.panelEx8);
                this.Controls.Add(this.btnXoa);
                this.Controls.Add(this.btnSua);
@@ -535,7 +478,8 @@
                this.Controls.Add(this.panelEx1);
                this.Name = "ucRetireNV";
                this.Size = new System.Drawing.Size(981, 734);
-               ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNV)).EndInit();
+               this.Load += new System.EventHandler(this.ucRetireNV_Load);
+               ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRetireNV)).EndInit();
                ((System.ComponentModel.ISupportInitialize)(this.dTNSNV)).EndInit();
                ((System.ComponentModel.ISupportInitialize)(this.rGGTNV.Properties)).EndInit();
                this.ResumeLayout(false);
@@ -545,14 +489,7 @@
           #endregion
 
           private DevComponents.DotNetBar.ButtonX btnThem;
-          private System.Windows.Forms.DataGridViewTextBoxColumn SDTNV;
-          private System.Windows.Forms.DataGridViewTextBoxColumn NSNV;
-          private System.Windows.Forms.DataGridViewTextBoxColumn GTNV;
-          private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewNV;
-          private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
-          private System.Windows.Forms.DataGridViewTextBoxColumn HoNV;
-          private System.Windows.Forms.DataGridViewTextBoxColumn TenNV;
-          private System.Windows.Forms.DataGridViewTextBoxColumn DiaChiNV;
+          private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewRetireNV;
           private DevComponents.DotNetBar.PanelEx panelEx8;
           private DevComponents.DotNetBar.ButtonX btnXoa;
           private DevComponents.DotNetBar.ButtonX btnSua;

@@ -62,19 +62,19 @@ namespace btlCSDL
                  false, 0, 0, string.Empty, DataRowVersion.Default, null));
             return cmd;
         }
-        ////Hàm thực thi thủ tục và trả về số dòng đã thực hiện(thành công >0)\
-        ////Hàm này sử dụng khi thêm và xoá
-        //public static int ExecuteNonQuery(string proceduceName, SqlParameter[] parameters)
-        //{
-        //     //openConnection();
-        //     var cmd = buildCommand(proceduceName, parameters);
-        //     cmd.CommandType = CommandType.StoredProcedure;
-        //     var rec = cmd.ExecuteNonQuery();
-        //     closeConnection();
-        //     return rec;
-        //}
-        ////Hàm thuc thi thủ tục và trả về 1 datatable
-        public static DataTable ExecuteQuery(string proceduceName, params SqlParameter[] parameters)
+          //Hàm thực thi thủ tục và trả về số dòng đã thực hiện(thành công >0)\
+          //Hàm này sử dụng khi thêm và xoá
+          public static int ExecuteNonQuery(string proceduceName, SqlParameter[] parameters)
+          {
+               openConnection();
+               var cmd = buildCommand(proceduceName, parameters);
+               cmd.CommandType = CommandType.StoredProcedure;
+               var rec = cmd.ExecuteNonQuery();
+               closeConnection();
+               return rec;
+          }
+          //Hàm thuc thi thủ tục và trả về 1 datatable
+          public static DataTable ExecuteQuery(string proceduceName, params SqlParameter[] parameters)
         {
             openConnection();
             using (var sqlDa = new SqlDataAdapter(buildCommand(proceduceName, parameters)))
@@ -87,22 +87,23 @@ namespace btlCSDL
                 }
             }
         }
-        //public static int ExecuteIntCommand(string procedureName, SqlParameter[] parameters)
-        //{
-        //     try
-        //     {
-        //          openConnection();
-        //          var cmd = buildIntCommand(procedureName, parameters);
-        //          cmd.ExecuteNonQuery();
-        //          var rec = (int)cmd.Parameters["ReturnValue"].Value;
-        //          closeConnection();
-        //          return rec;
-        //     }
-        //     catch (Exception)
-        //     {
-        //          XtraMessageBox.Show("Không thể thực thi.", "LỖI");
-        //          return -1;
-        //     }
-        //}
-    }
+          public static int ExecuteIntCommand(string procedureName, SqlParameter[] parameters)
+          {
+               try
+               {
+                    openConnection();
+                    var cmd = buildIntCommand(procedureName, parameters);
+                    cmd.ExecuteNonQuery();
+                    var rec = (int)cmd.Parameters["ReturnValue"].Value;
+                    closeConnection();
+                    return rec;
+               }
+               catch (Exception)
+               {
+                    XtraMessageBox.Show("Không thể thực thi.", "LỖI");
+                    return -1;
+               }
+          }
+
+     }
 }

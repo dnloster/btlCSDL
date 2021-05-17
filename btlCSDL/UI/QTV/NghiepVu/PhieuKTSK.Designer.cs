@@ -55,14 +55,10 @@
                this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
                this.HOKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
                this.TENKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-               this.comboBoxEx1 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-
                this.pHIEUKTSKBindingSource = new System.Windows.Forms.BindingSource(this.components);
-
                ((System.ComponentModel.ISupportInitialize)(this.dTNgayKT)).BeginInit();
                ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTSK)).BeginInit();
                ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).BeginInit();
-
                ((System.ComponentModel.ISupportInitialize)(this.pHIEUKTSKBindingSource)).BeginInit();
                this.SuspendLayout();
                // 
@@ -98,7 +94,6 @@
                this.btnSua.SymbolColor = System.Drawing.Color.MediumBlue;
                this.btnSua.TabIndex = 125;
                this.btnSua.Text = "Sửa";
-
                // 
                // btnThem
                // 
@@ -350,15 +345,14 @@
                this.btnXuatPhieuKTSK.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
                this.btnXuatPhieuKTSK.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
                this.btnXuatPhieuKTSK.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-               this.btnXuatPhieuKTSK.Location = new System.Drawing.Point(817, 558);
+               this.btnXuatPhieuKTSK.Location = new System.Drawing.Point(638, 558);
                this.btnXuatPhieuKTSK.Name = "btnXuatPhieuKTSK";
-               this.btnXuatPhieuKTSK.Size = new System.Drawing.Size(119, 44);
+               this.btnXuatPhieuKTSK.Size = new System.Drawing.Size(298, 44);
                this.btnXuatPhieuKTSK.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
                this.btnXuatPhieuKTSK.Symbol = "";
                this.btnXuatPhieuKTSK.SymbolColor = System.Drawing.Color.Blue;
                this.btnXuatPhieuKTSK.TabIndex = 169;
                this.btnXuatPhieuKTSK.Text = "Xuất Phiếu";
-
                // 
                // dataGridViewKTSK
                // 
@@ -450,32 +444,10 @@
                this.TENKH.HeaderText = "Tên khách hàng";
                this.TENKH.Name = "TENKH";
                // 
-               // comboBoxEx1
-               // 
-               this.comboBoxEx1.DataSource = this.pHIEUKTSKBindingSource;
-               this.comboBoxEx1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-               this.comboBoxEx1.FormattingEnabled = true;
-               this.comboBoxEx1.ItemHeight = 15;
-               this.comboBoxEx1.Location = new System.Drawing.Point(655, 562);
-               this.comboBoxEx1.Name = "comboBoxEx1";
-               this.comboBoxEx1.Size = new System.Drawing.Size(162, 21);
-               this.comboBoxEx1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
-               this.comboBoxEx1.TabIndex = 226;
-               // 
-               // dataSetKTSK
-               // 
-               // 
-               // pHIEUKTSKBindingSource
-               // 
-               // 
-               // pHIEUKTSKTableAdapter
-               // 
-               // 
                // PhieuKTSK
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-               this.Controls.Add(this.comboBoxEx1);
                this.Controls.Add(this.dataGridViewX1);
                this.Controls.Add(this.dataGridViewKTSK);
                this.Controls.Add(this.btnXuatPhieuKTSK);
@@ -529,7 +501,6 @@
           private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewX1;
           private System.Windows.Forms.DataGridViewTextBoxColumn HOKH;
           private System.Windows.Forms.DataGridViewTextBoxColumn TENKH;
-          private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx1;
           private System.Windows.Forms.BindingSource pHIEUKTSKBindingSource;
 
      }

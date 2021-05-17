@@ -81,9 +81,9 @@
                this.fluentDesignFormContainer1.Controls.Add(this.panel1);
                this.fluentDesignFormContainer1.Controls.Add(this.pictureBox1);
                this.fluentDesignFormContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-               this.fluentDesignFormContainer1.Location = new System.Drawing.Point(48, 31);
+               this.fluentDesignFormContainer1.Location = new System.Drawing.Point(250, 31);
                this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
-               this.fluentDesignFormContainer1.Size = new System.Drawing.Size(981, 734);
+               this.fluentDesignFormContainer1.Size = new System.Drawing.Size(779, 734);
                this.fluentDesignFormContainer1.TabIndex = 0;
                this.fluentDesignFormContainer1.Click += new System.EventHandler(this.accordionControlElement1_Click);
                // 
@@ -158,10 +158,9 @@
                this.accordionControl1.Location = new System.Drawing.Point(0, 31);
                this.accordionControl1.Name = "accordionControl1";
                this.accordionControl1.OptionsFooter.ActiveGroupDisplayMode = DevExpress.XtraBars.Navigation.ActiveGroupDisplayMode.GroupHeaderAndContent;
-               this.accordionControl1.OptionsMinimizing.State = DevExpress.XtraBars.Navigation.AccordionControlState.Minimized;
                this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Hidden;
                this.accordionControl1.SelectElementMode = DevExpress.XtraBars.Navigation.SelectElementMode.MouseDown;
-               this.accordionControl1.Size = new System.Drawing.Size(48, 734);
+               this.accordionControl1.Size = new System.Drawing.Size(250, 734);
                this.accordionControl1.TabIndex = 1;
                this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
                // 
@@ -198,6 +197,7 @@
             this.accordionControlElement8,
             this.accordionControlElement10,
             this.accordionControlElement9});
+               this.accordionControlElement7.Expanded = true;
                this.accordionControlElement7.Name = "accordionControlElement7";
                toolTipItem2.Text = "Quản lý nhân sự";
                superToolTip2.Items.Add(toolTipItem2);
@@ -217,6 +217,7 @@
                this.accordionControlElement8.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement3,
             this.accordionControlElement4});
+               this.accordionControlElement8.Expanded = true;
                this.accordionControlElement8.Name = "accordionControlElement8";
                this.accordionControlElement8.Text = "Bác Sỹ";
                // 

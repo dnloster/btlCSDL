@@ -29,13 +29,6 @@ namespace btlCSDL.UI.QTV
             dataGridViewKH.DataSource = null;
             dataGridViewKH.DataSource = ExecuteQuery("Show_KH_TTTC").Copy();
         }
-        //public string MaKH { get; set; }
-        //public string HoKH { get; set; }
-        //public string TenKH { get; set; }
-        //public string DiaChiKH { get; set; }
-        //public string GTKH { get; set; }
-        //public DateTime NSKH { get; set; }
-        //public string NguoiBT { get; set; }
-        //public char SDTKH { get; set; }
+        
     }
 }

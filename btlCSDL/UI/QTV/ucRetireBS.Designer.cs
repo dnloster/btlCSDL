@@ -30,7 +30,7 @@
           {
                System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
                this.btnThem = new DevComponents.DotNetBar.ButtonX();
-               this.dataGridViewNV = new DevComponents.DotNetBar.Controls.DataGridViewX();
+               this.dataGridViewRetireBS = new DevComponents.DotNetBar.Controls.DataGridViewX();
                this.panelEx8 = new DevComponents.DotNetBar.PanelEx();
                this.btnXoa = new DevComponents.DotNetBar.ButtonX();
                this.btnSua = new DevComponents.DotNetBar.ButtonX();
@@ -50,14 +50,7 @@
                this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
                this.txtMaBS = new DevComponents.DotNetBar.Controls.TextBoxX();
                this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
-               this.MABS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-               this.HOBS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-               this.TENBS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-               this.DIACHIBS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-               this.GTBS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-               this.NSBS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-               this.SDTBS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-               ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNV)).BeginInit();
+               ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRetireBS)).BeginInit();
                ((System.ComponentModel.ISupportInitialize)(this.dTNSBS)).BeginInit();
                ((System.ComponentModel.ISupportInitialize)(this.rGGTBS.Properties)).BeginInit();
                this.SuspendLayout();
@@ -76,20 +69,12 @@
                this.btnThem.TabIndex = 249;
                this.btnThem.Text = "Thêm";
                // 
-               // dataGridViewNV
+               // dataGridViewRetireBS
                // 
-               this.dataGridViewNV.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-               this.dataGridViewNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-               this.dataGridViewNV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-               this.dataGridViewNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-               this.dataGridViewNV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MABS,
-            this.HOBS,
-            this.TENBS,
-            this.DIACHIBS,
-            this.GTBS,
-            this.NSBS,
-            this.SDTBS});
+               this.dataGridViewRetireBS.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+               this.dataGridViewRetireBS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+               this.dataGridViewRetireBS.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+               this.dataGridViewRetireBS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
                dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
                dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
                dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 8.25F);
@@ -97,12 +82,12 @@
                dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
                dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
                dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-               this.dataGridViewNV.DefaultCellStyle = dataGridViewCellStyle1;
-               this.dataGridViewNV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-               this.dataGridViewNV.Location = new System.Drawing.Point(0, 46);
-               this.dataGridViewNV.Name = "dataGridViewNV";
-               this.dataGridViewNV.Size = new System.Drawing.Size(676, 688);
-               this.dataGridViewNV.TabIndex = 248;
+               this.dataGridViewRetireBS.DefaultCellStyle = dataGridViewCellStyle1;
+               this.dataGridViewRetireBS.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+               this.dataGridViewRetireBS.Location = new System.Drawing.Point(0, 46);
+               this.dataGridViewRetireBS.Name = "dataGridViewRetireBS";
+               this.dataGridViewRetireBS.Size = new System.Drawing.Size(676, 688);
+               this.dataGridViewRetireBS.TabIndex = 248;
                // 
                // panelEx8
                // 
@@ -466,54 +451,12 @@
                this.panelEx1.TabIndex = 229;
                this.panelEx1.Text = "THÔNG TIN BÁC SỸ ĐÃ NGHỈ VIỆC";
                // 
-               // MABS
-               // 
-               this.MABS.DataPropertyName = "MABS";
-               this.MABS.HeaderText = "Mã bác sỹ";
-               this.MABS.Name = "MABS";
-               // 
-               // HOBS
-               // 
-               this.HOBS.DataPropertyName = "HOBS";
-               this.HOBS.HeaderText = "Họ";
-               this.HOBS.Name = "HOBS";
-               // 
-               // TENBS
-               // 
-               this.TENBS.DataPropertyName = "TENBS";
-               this.TENBS.HeaderText = "Tên";
-               this.TENBS.Name = "TENBS";
-               // 
-               // DIACHIBS
-               // 
-               this.DIACHIBS.DataPropertyName = "DIACHIBS";
-               this.DIACHIBS.HeaderText = "Địa chỉ";
-               this.DIACHIBS.Name = "DIACHIBS";
-               // 
-               // GTBS
-               // 
-               this.GTBS.DataPropertyName = "GTBS";
-               this.GTBS.HeaderText = "Giới tính";
-               this.GTBS.Name = "GTBS";
-               // 
-               // NSBS
-               // 
-               this.NSBS.DataPropertyName = "NSBS";
-               this.NSBS.HeaderText = "Ngày sinh";
-               this.NSBS.Name = "NSBS";
-               // 
-               // SDTBS
-               // 
-               this.SDTBS.DataPropertyName = "SDTBS";
-               this.SDTBS.HeaderText = "Số điện thoại";
-               this.SDTBS.Name = "SDTBS";
-               // 
                // ucRetireBS
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
                this.Controls.Add(this.btnThem);
-               this.Controls.Add(this.dataGridViewNV);
+               this.Controls.Add(this.dataGridViewRetireBS);
                this.Controls.Add(this.panelEx8);
                this.Controls.Add(this.btnXoa);
                this.Controls.Add(this.btnSua);
@@ -535,7 +478,8 @@
                this.Controls.Add(this.panelEx1);
                this.Name = "ucRetireBS";
                this.Size = new System.Drawing.Size(981, 734);
-               ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNV)).EndInit();
+               this.Load += new System.EventHandler(this.ucRetireBS_Load);
+               ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRetireBS)).EndInit();
                ((System.ComponentModel.ISupportInitialize)(this.dTNSBS)).EndInit();
                ((System.ComponentModel.ISupportInitialize)(this.rGGTBS.Properties)).EndInit();
                this.ResumeLayout(false);
@@ -545,14 +489,7 @@
           #endregion
 
           private DevComponents.DotNetBar.ButtonX btnThem;
-          private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewNV;
-          private System.Windows.Forms.DataGridViewTextBoxColumn MABS;
-          private System.Windows.Forms.DataGridViewTextBoxColumn HOBS;
-          private System.Windows.Forms.DataGridViewTextBoxColumn TENBS;
-          private System.Windows.Forms.DataGridViewTextBoxColumn DIACHIBS;
-          private System.Windows.Forms.DataGridViewTextBoxColumn GTBS;
-          private System.Windows.Forms.DataGridViewTextBoxColumn NSBS;
-          private System.Windows.Forms.DataGridViewTextBoxColumn SDTBS;
+          private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewRetireBS;
           private DevComponents.DotNetBar.PanelEx panelEx8;
           private DevComponents.DotNetBar.ButtonX btnXoa;
           private DevComponents.DotNetBar.ButtonX btnSua;
