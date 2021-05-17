@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using System.Data.SqlClient;
 
 namespace btlCSDL.UI.Khach
 {
@@ -17,10 +18,19 @@ namespace btlCSDL.UI.Khach
           {
                InitializeComponent();
           }
-
+          SqlCommand cmd;
+          DataConnection dc = new DataConnection();
           private void ucXemHD_Load(object sender, EventArgs e)
           {
-
+               SqlConnection con = dc.getConnect();
+               con.Open();
+               cmd = new SqlCommand("XemHoaDon", con);
+               cmd.CommandType = CommandType.StoredProcedure;
+               
+               cmd.Parameters.AddWithValue("@makh", SqlDbType.VarChar).Value = "KH010";
+               
+               cmd.ExecuteNonQuery();
+               con.Close();
           }
      }
 }

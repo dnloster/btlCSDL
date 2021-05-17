@@ -46,6 +46,7 @@
                this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
                this.itemNav = new DevExpress.XtraBars.BarStaticItem();
                this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
+               this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
                this.fluentDesignFormContainer1.SuspendLayout();
                this.panel1.SuspendLayout();
                ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -151,7 +152,8 @@
             this.aCTrangchu,
             this.accordionControlElement2,
             this.aCBangGia,
-            this.aCXemHD});
+            this.aCXemHD,
+            this.accordionControlElement1});
                this.accordionControl1.ExpandElementMode = DevExpress.XtraBars.Navigation.ExpandElementMode.Single;
                this.accordionControl1.Location = new System.Drawing.Point(0, 31);
                this.accordionControl1.Name = "accordionControl1";
@@ -256,6 +258,12 @@
             this.itemNav});
                this.fluentFormDefaultManager1.MaxItemId = 1;
                // 
+               // accordionControlElement1
+               // 
+               this.accordionControlElement1.Name = "accordionControlElement1";
+               this.accordionControlElement1.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+               this.accordionControlElement1.Text = "Tư vấn tiêm";
+               // 
                // FluentDesignForm1
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,5 +310,6 @@
           private DevExpress.XtraBars.Navigation.AccordionControlElement aCBangGia;
           private DevExpress.XtraBars.Navigation.AccordionControlElement aCXemHD;
           private DevExpress.XtraBars.BarStaticItem itemNav;
+          private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
      }
 }

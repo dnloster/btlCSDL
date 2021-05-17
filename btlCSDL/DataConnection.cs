@@ -13,7 +13,7 @@ namespace btlCSDL
      public class DataConnection
      {
           //Tạo kết nối CSDL
-          private static SqlConnection conn;
+          //private static SqlConnection conn;
           string connectionString;
           public DataConnection()
           {
