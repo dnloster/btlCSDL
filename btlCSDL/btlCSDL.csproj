@@ -211,6 +211,18 @@
     <Compile Include="UI\QTV\ucKhoVC.Designer.cs">
       <DependentUpon>ucKhoVC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\QTV\ucRetireBS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\QTV\ucRetireBS.Designer.cs">
+      <DependentUpon>ucRetireBS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\QTV\ucRetireNV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\QTV\ucRetireNV.Designer.cs">
+      <DependentUpon>ucRetireNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\QTV\ucWorkingNV.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -284,6 +296,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\QTV\ucKhoVC.resx">
       <DependentUpon>ucKhoVC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\QTV\ucRetireBS.resx">
+      <DependentUpon>ucRetireBS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\QTV\ucRetireNV.resx">
+      <DependentUpon>ucRetireNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\QTV\ucWorkingNV.resx">
       <DependentUpon>ucWorkingNV.cs</DependentUpon>

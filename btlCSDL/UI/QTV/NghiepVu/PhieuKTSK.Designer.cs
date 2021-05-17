@@ -56,13 +56,13 @@
                this.HOKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
                this.TENKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
                this.comboBoxEx1 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-               this.dataSetKTSK = new btlCSDL.Report.DataSetKTSK();
+
                this.pHIEUKTSKBindingSource = new System.Windows.Forms.BindingSource(this.components);
-               this.pHIEUKTSKTableAdapter = new btlCSDL.Report.DataSetKTSKTableAdapters.PHIEUKTSKTableAdapter();
+
                ((System.ComponentModel.ISupportInitialize)(this.dTNgayKT)).BeginInit();
                ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTSK)).BeginInit();
                ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).BeginInit();
-               ((System.ComponentModel.ISupportInitialize)(this.dataSetKTSK)).BeginInit();
+
                ((System.ComponentModel.ISupportInitialize)(this.pHIEUKTSKBindingSource)).BeginInit();
                this.SuspendLayout();
                // 
@@ -98,7 +98,7 @@
                this.btnSua.SymbolColor = System.Drawing.Color.MediumBlue;
                this.btnSua.TabIndex = 125;
                this.btnSua.Text = "Sửa";
-               this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+
                // 
                // btnThem
                // 
@@ -113,7 +113,6 @@
                this.btnThem.SymbolColor = System.Drawing.Color.Lime;
                this.btnThem.TabIndex = 124;
                this.btnThem.Text = "Thêm";
-               this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
                // 
                // dTNgayKT
                // 
@@ -359,7 +358,7 @@
                this.btnXuatPhieuKTSK.SymbolColor = System.Drawing.Color.Blue;
                this.btnXuatPhieuKTSK.TabIndex = 169;
                this.btnXuatPhieuKTSK.Text = "Xuất Phiếu";
-               this.btnXuatPhieuKTSK.Click += new System.EventHandler(this.btnXuatPhieuKTSK_Click);
+
                // 
                // dataGridViewKTSK
                // 
@@ -465,17 +464,12 @@
                // 
                // dataSetKTSK
                // 
-               this.dataSetKTSK.DataSetName = "DataSetKTSK";
-               this.dataSetKTSK.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
                // 
                // pHIEUKTSKBindingSource
                // 
-               this.pHIEUKTSKBindingSource.DataMember = "PHIEUKTSK";
-               this.pHIEUKTSKBindingSource.DataSource = this.dataSetKTSK;
                // 
                // pHIEUKTSKTableAdapter
                // 
-               this.pHIEUKTSKTableAdapter.ClearBeforeFill = true;
                // 
                // PhieuKTSK
                // 
@@ -505,7 +499,6 @@
                ((System.ComponentModel.ISupportInitialize)(this.dTNgayKT)).EndInit();
                ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKTSK)).EndInit();
                ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).EndInit();
-               ((System.ComponentModel.ISupportInitialize)(this.dataSetKTSK)).EndInit();
                ((System.ComponentModel.ISupportInitialize)(this.pHIEUKTSKBindingSource)).EndInit();
                this.ResumeLayout(false);
 
@@ -538,7 +531,6 @@
           private System.Windows.Forms.DataGridViewTextBoxColumn TENKH;
           private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx1;
           private System.Windows.Forms.BindingSource pHIEUKTSKBindingSource;
-          private Report.DataSetKTSK dataSetKTSK;
-          private Report.DataSetKTSKTableAdapters.PHIEUKTSKTableAdapter pHIEUKTSKTableAdapter;
+
      }
 }

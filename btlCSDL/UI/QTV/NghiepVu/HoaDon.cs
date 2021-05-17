@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using btlCSDL.Report;
+
 
 namespace btlCSDL.UI.QTV.NghiepVu
 {
@@ -84,9 +84,7 @@ namespace btlCSDL.UI.QTV.NghiepVu
           public static string mahd;
           private void btnXuatHD_Click(object sender, EventArgs e)
           {
-               mahd = txtMaHD.Text;
-               ReportHD HD = new ReportHD();
-               HD.Show();
+               
           }
      }
 }

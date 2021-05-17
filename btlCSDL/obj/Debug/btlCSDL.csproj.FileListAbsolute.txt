@@ -610,3 +610,10 @@ C:\Users\dungt\Source\Repos\btlCSDL\btlCSDL\bin\Debug\DevComponents.DotNetBar2.d
 C:\Users\dungt\Source\Repos\btlCSDL\btlCSDL\bin\Debug\DevComponents.Instrumentation.dll
 C:\Users\dungt\Source\Repos\btlCSDL\btlCSDL\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
 C:\Users\dungt\Source\Repos\btlCSDL\btlCSDL\bin\Debug\DevComponents.Instrumentation.xml
+C:\Users\ducva\Desktop\btlCSDL\btlCSDL\obj\Debug\btlCSDL.UI.QTV.ucRetireBS.resources
+C:\Users\ducva\Desktop\btlCSDL\btlCSDL\obj\Debug\btlCSDL.UI.QTV.ucRetireNV.resources
+C:\Users\ducva\Desktop\btlCSDL\btlCSDL\bin\Debug\DevComponents.DotNetBar.Layout.dll
+C:\Users\ducva\Desktop\btlCSDL\btlCSDL\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
+C:\Users\ducva\Desktop\btlCSDL\btlCSDL\bin\Debug\DevComponents.Instrumentation.dll
+C:\Users\ducva\Desktop\btlCSDL\btlCSDL\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+C:\Users\ducva\Desktop\btlCSDL\btlCSDL\bin\Debug\DevComponents.Instrumentation.xml
