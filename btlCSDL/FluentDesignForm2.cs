@@ -61,37 +61,9 @@ namespace btlCSDL
           private async void AccordionControlElement6_Click(object sender, EventArgs e)
           {
                this.itemNav.Caption = $"{accordionControlElement6.Text}";
-               if (!fluentDesignFormContainer1.Controls.Contains(ucKhoVC.Instance))
-               {
-                    fluentDesignFormContainer1.Controls.Add(ucKhoVC.Instance);
-                    ucKhoVC.Instance.Dock = DockStyle.Fill;
-                    ucKhoVC.Instance.BringToFront();
-               }
-               else
-                    ucKhoVC.Instance.BringToFront();
-          }
-          private async void accordionControlElement8_Click(object sender, EventArgs e)
-          {
-               this.itemNav.Caption = $"{accordionControlElement8.Text}";
-               if (ModulesInfo.GetItem("ucBacSy") == null)
-                    ModulesInfo.Add(new ModuleInfo("ucBacSy", "btlCSDL.UI.QTV.ucBacSy"));
-               await LoadModuleAsync(ModulesInfo.GetItem("ucBacSy"));
-          }
-
-          private async void accordionControlElement9_Click(object sender, EventArgs e)
-          {
-               this.itemNav.Caption = $"{accordionControlElement9.Text}";
-               if (ModulesInfo.GetItem("ucKhachHang") == null)
-                    ModulesInfo.Add(new ModuleInfo("ucKhachHang", "btlCSDL.UI.QTV.ucKhachHang"));
-               await LoadModuleAsync(ModulesInfo.GetItem("ucKhachHang"));
-          }
-
-          private async void accordionControlElement10_Click(object sender, EventArgs e)
-          {
-               this.itemNav.Caption = $"{accordionControlElement10.Text}";
-               if (ModulesInfo.GetItem("ucWorkingNV") == null)
-                    ModulesInfo.Add(new ModuleInfo("ucWorkingNV", "btlCSDL.UI.QTV.ucWorkingNV"));
-               await LoadModuleAsync(ModulesInfo.GetItem("ucWorkingNV"));
+               if (ModulesInfo.GetItem("ucKhoVC") == null)
+                    ModulesInfo.Add(new ModuleInfo("ucKhoVC", "btlCSDL.UI.QTV.ucKhoVC"));
+               await LoadModuleAsync(ModulesInfo.GetItem("ucKhoVC"));
           }
 
           private void FluentDesignForm2_Load(object sender, EventArgs e)
@@ -111,22 +83,15 @@ namespace btlCSDL
           private async void accordionControlElement13_Click(object sender, EventArgs e)
           {
                this.itemNav.Caption = $"{accordionControlElement13.Text}";
-               //if (ModulesInfo.GetItem("ucVaccine") == null)
-               //     ModulesInfo.Add(new ModuleInfo("ucVaccine", "btlCSDL.UI.QTV.ucVaccine"));
-               //await LoadModuleAsync(ModulesInfo.GetItem("ucVaccine"));
-               if (!fluentDesignFormContainer1.Controls.Contains(ucVaccine.Instance))
-               {
-                    fluentDesignFormContainer1.Controls.Add(ucVaccine.Instance);
-                    ucVaccine.Instance.Dock = DockStyle.Fill;
-                    ucVaccine.Instance.BringToFront();
-               }
-               else
-                    ucVaccine.Instance.BringToFront();
+               if (ModulesInfo.GetItem("ucVaccine") == null)
+                    ModulesInfo.Add(new ModuleInfo("ucVaccine", "btlCSDL.UI.QTV.ucVaccine"));
+               await LoadModuleAsync(ModulesInfo.GetItem("ucVaccine"));
+
           }
 
           private async void aCKTSK_Click(object sender, EventArgs e)
           {
-               this.itemNav.Caption = $"{accordionControlElement10.Text}";
+               this.itemNav.Caption = $"{aCKTSK.Text}";
                if (ModulesInfo.GetItem("PhieuKTSK") == null)
                     ModulesInfo.Add(new ModuleInfo("PhieuKTSK", "btlCSDL.UI.QTV.NghiepVu.PhieuKTSK"));
                await LoadModuleAsync(ModulesInfo.GetItem("PhieuKTSK"));
@@ -134,7 +99,7 @@ namespace btlCSDL
 
           private async void aCPT_Click(object sender, EventArgs e)
           {
-               this.itemNav.Caption = $"{accordionControlElement10.Text}";
+               this.itemNav.Caption = $"{aCPT.Text}";
                if (ModulesInfo.GetItem("PhieuTiem") == null)
                     ModulesInfo.Add(new ModuleInfo("PhieuTiem", "btlCSDL.UI.QTV.NghiepVu.PhieuTiem"));
                await LoadModuleAsync(ModulesInfo.GetItem("PhieuTiem"));
@@ -142,7 +107,7 @@ namespace btlCSDL
 
           private async void aCHD_Click(object sender, EventArgs e)
           {
-               this.itemNav.Caption = $"{accordionControlElement10.Text}";
+               this.itemNav.Caption = $"{aCHD.Text}";
                if (ModulesInfo.GetItem("HoaDon") == null)
                     ModulesInfo.Add(new ModuleInfo("HoaDon", "btlCSDL.UI.QTV.NghiepVu.HoaDon"));
                await LoadModuleAsync(ModulesInfo.GetItem("HoaDon"));
@@ -150,23 +115,47 @@ namespace btlCSDL
 
           private async void aCPN_Click(object sender, EventArgs e)
           {
-               this.itemNav.Caption = $"{accordionControlElement10.Text}";
+               this.itemNav.Caption = $"{aCPN.Text}";
                if (ModulesInfo.GetItem("PhieuNhap") == null)
                     ModulesInfo.Add(new ModuleInfo("PhieuNhap", "btlCSDL.UI.QTV.NghiepVu.PhieuNhap"));
                await LoadModuleAsync(ModulesInfo.GetItem("PhieuNhap"));
           }
 
+          private async void accordionControlElement3_Click(object sender, EventArgs e)
+          {
+               this.itemNav.Caption = $"{accordionControlElement8.Text}";
+               if (ModulesInfo.GetItem("ucBacSy") == null)
+                    ModulesInfo.Add(new ModuleInfo("ucBacSy", "btlCSDL.UI.QTV.ucBacSy"));
+               await LoadModuleAsync(ModulesInfo.GetItem("ucBacSy"));
+          }
+
           private async void accordionControlElement4_Click(object sender, EventArgs e)
           {
-               this.itemNav.Caption = $"{accordionControlElement4.Text}";
-               if (ModulesInfo.GetItem("ucRetireBS") == null)
-                    ModulesInfo.Add(new ModuleInfo("ucRetireBS", "btlCSDL.UI.QTV.ucRetireBS"));
-               await LoadModuleAsync(ModulesInfo.GetItem("ucRetireBS"));
+               this.itemNav.Caption = $"{accordionControlElement8.Text}";
+               if (ModulesInfo.GetItem("ucRetireBacSy") == null)
+                    ModulesInfo.Add(new ModuleInfo("ucRetireBacSy", "btlCSDL.UI.QTV.ucRetireBacSy"));
+               await LoadModuleAsync(ModulesInfo.GetItem("ucRetireBacSy"));
+          }
+
+          private async void accordionControlElement9_Click(object sender, EventArgs e)
+          {
+               this.itemNav.Caption = $"{accordionControlElement9.Text}";
+               if (ModulesInfo.GetItem("ucKhachHang") == null)
+                    ModulesInfo.Add(new ModuleInfo("ucKhachHang", "btlCSDL.UI.QTV.ucKhachHang"));
+               await LoadModuleAsync(ModulesInfo.GetItem("ucKhachHang"));
           }
 
           private async void accordionControlElement5_Click(object sender, EventArgs e)
           {
-               this.itemNav.Caption = $"{accordionControlElement5.Text}";
+               this.itemNav.Caption = $"{accordionControlElement10.Text}";
+               if (ModulesInfo.GetItem("ucNhanVien") == null)
+                    ModulesInfo.Add(new ModuleInfo("ucNhanVien", "btlCSDL.UI.QTV.ucNhanVien"));
+               await LoadModuleAsync(ModulesInfo.GetItem("ucNhanVien"));
+          }
+
+          private async void accordionControlElement11_Click(object sender, EventArgs e)
+          {
+               this.itemNav.Caption = $"{accordionControlElement10.Text}";
                if (ModulesInfo.GetItem("ucRetireNV") == null)
                     ModulesInfo.Add(new ModuleInfo("ucRetireNV", "btlCSDL.UI.QTV.ucRetireNV"));
                await LoadModuleAsync(ModulesInfo.GetItem("ucRetireNV"));

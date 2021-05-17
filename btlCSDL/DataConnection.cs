@@ -19,7 +19,7 @@ namespace btlCSDL
         {
             try
             {
-                string connectionString = @"Data Source=DUNG\SQLEXPRESS;Initial Catalog=TTTC;Integrated Security=True";
+                string connectionString = @"Data Source=DESKTOP-LDF85Q4\DUCNGUYEN;Initial Catalog=quanlytiemchung;Integrated Security=True";
                 if (conn == null)
                 {
                     conn = new SqlConnection(connectionString);

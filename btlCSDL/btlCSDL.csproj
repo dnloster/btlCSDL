@@ -223,11 +223,11 @@
     <Compile Include="UI\QTV\ucRetireNV.Designer.cs">
       <DependentUpon>ucRetireNV.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\QTV\ucWorkingNV.cs">
+    <Compile Include="UI\QTV\ucNhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\QTV\ucWorkingNV.Designer.cs">
-      <DependentUpon>ucWorkingNV.cs</DependentUpon>
+    <Compile Include="UI\QTV\ucNhanVien.Designer.cs">
+      <DependentUpon>ucNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\QTV\ucVaccine.cs">
       <SubType>UserControl</SubType>
@@ -303,8 +303,8 @@
     <EmbeddedResource Include="UI\QTV\ucRetireNV.resx">
       <DependentUpon>ucRetireNV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\QTV\ucWorkingNV.resx">
-      <DependentUpon>ucWorkingNV.cs</DependentUpon>
+    <EmbeddedResource Include="UI\QTV\ucNhanVien.resx">
+      <DependentUpon>ucNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\QTV\ucVaccine.resx">
       <DependentUpon>ucVaccine.cs</DependentUpon>
