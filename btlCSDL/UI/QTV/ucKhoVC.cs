@@ -8,6 +8,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using static btlCSDL.DataConnection;
+using System.Data.SqlClient;
 
 namespace btlCSDL.UI.QTV
 {
@@ -25,8 +27,22 @@ namespace btlCSDL.UI.QTV
                     if (_instance == null)
                          _instance = new ucKhoVC();
                     return _instance;
+
                }
           }
 
-     }
+        private void ucKhoVC_Load(object sender, EventArgs e)
+        {
+            string kho = "K01";
+            SqlParameter[] Params = new SqlParameter[]
+                   {
+                new SqlParameter("MAKHO", kho)
+                   };
+            //DataSet ds = new DataSet();
+            //DataTable db = ExecuteQuery("Show_VCTK_TTTC",Params).Copy();
+            //ds.Tables.Add(db);
+            dataGridViewX1.DataSource = null;
+            dataGridViewX1.DataSource = ExecuteQuery("XemCTKho", Params).Copy();
+        }
+    }
 }
