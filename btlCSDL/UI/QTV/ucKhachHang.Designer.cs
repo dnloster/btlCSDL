@@ -59,6 +59,7 @@
             this.GTKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NSKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SDTKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Col8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dTNSKH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rGGTKH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKH)).BeginInit();
@@ -429,6 +430,8 @@
             // 
             // dataGridViewKH
             // 
+            this.dataGridViewKH.AllowUserToAddRows = false;
+            this.dataGridViewKH.AllowUserToDeleteRows = false;
             this.dataGridViewKH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewKH.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.dataGridViewKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -439,7 +442,8 @@
             this.DiaChiKH,
             this.GTKH,
             this.NSKH,
-            this.SDTKH});
+            this.SDTKH,
+            this.Col8});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 8.25F);
@@ -451,6 +455,7 @@
             this.dataGridViewKH.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dataGridViewKH.Location = new System.Drawing.Point(0, 46);
             this.dataGridViewKH.Name = "dataGridViewKH";
+            this.dataGridViewKH.ReadOnly = true;
             this.dataGridViewKH.Size = new System.Drawing.Size(676, 688);
             this.dataGridViewKH.TabIndex = 113;
             // 
@@ -476,42 +481,56 @@
             this.MaKH.DataPropertyName = "MAKH";
             this.MaKH.HeaderText = "Mã khách hàng";
             this.MaKH.Name = "MaKH";
+            this.MaKH.ReadOnly = true;
             // 
             // HoKH
             // 
             this.HoKH.DataPropertyName = "HOKH";
             this.HoKH.HeaderText = "Họ";
             this.HoKH.Name = "HoKH";
+            this.HoKH.ReadOnly = true;
             // 
             // TenKH
             // 
             this.TenKH.DataPropertyName = "TENKH";
             this.TenKH.HeaderText = "Tên";
             this.TenKH.Name = "TenKH";
+            this.TenKH.ReadOnly = true;
             // 
             // DiaChiKH
             // 
             this.DiaChiKH.DataPropertyName = "DIACHIKH";
             this.DiaChiKH.HeaderText = "Địa chỉ";
             this.DiaChiKH.Name = "DiaChiKH";
+            this.DiaChiKH.ReadOnly = true;
             // 
             // GTKH
             // 
             this.GTKH.DataPropertyName = "GTKH";
             this.GTKH.HeaderText = "Giới tính";
             this.GTKH.Name = "GTKH";
+            this.GTKH.ReadOnly = true;
             // 
             // NSKH
             // 
             this.NSKH.DataPropertyName = "NSKH";
             this.NSKH.HeaderText = "Ngày sinh";
             this.NSKH.Name = "NSKH";
+            this.NSKH.ReadOnly = true;
             // 
             // SDTKH
             // 
             this.SDTKH.DataPropertyName = "SDTKH";
             this.SDTKH.HeaderText = "Số điện thoại";
             this.SDTKH.Name = "SDTKH";
+            this.SDTKH.ReadOnly = true;
+            // 
+            // Col8
+            // 
+            this.Col8.DataPropertyName = "NGUOIBT";
+            this.Col8.HeaderText = "Người bảo trợ";
+            this.Col8.Name = "Col8";
+            this.Col8.ReadOnly = true;
             // 
             // ucKhachHang
             // 
@@ -580,5 +599,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn GTKH;
         private System.Windows.Forms.DataGridViewTextBoxColumn NSKH;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDTKH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Col8;
     }
 }

@@ -21,7 +21,17 @@ namespace btlCSDL.UI.QTV
         private void ucNhanVien_Load(object sender, EventArgs e)
         {
             dataGridViewNV.DataSource = null;
-            dataGridViewNV.DataSource = ExecuteQuery("Show_NV_TTTC").Copy();
+            dataGridViewNV.DataSource = ExecuteQuery("Show_RetiredNV_TTTC").Copy();
+        }
+
+        private void panelEx1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewNV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

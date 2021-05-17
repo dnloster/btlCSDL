@@ -31,13 +31,19 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewNV = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChiNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GTNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NSNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SDTNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
             this.btnSua = new DevComponents.DotNetBar.ButtonX();
             this.dTNSNV = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.rGGTNV = new DevExpress.XtraEditors.RadioGroup();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.ucKhachHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panelEx8 = new DevComponents.DotNetBar.PanelEx();
             this.txtSDTNV = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.panelEx7 = new DevComponents.DotNetBar.PanelEx();
@@ -52,13 +58,7 @@
             this.txtMaNV = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.btnThem = new DevComponents.DotNetBar.ButtonX();
-            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaChiNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GTNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NSNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SDTNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ucKhachHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dTNSNV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rGGTNV.Properties)).BeginInit();
@@ -92,12 +92,55 @@
             this.dataGridViewNV.Name = "dataGridViewNV";
             this.dataGridViewNV.Size = new System.Drawing.Size(676, 688);
             this.dataGridViewNV.TabIndex = 158;
+            this.dataGridViewNV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewNV_CellContentClick);
+            // 
+            // MaNV
+            // 
+            this.MaNV.DataPropertyName = "MANV";
+            this.MaNV.HeaderText = "Mã nhân viên";
+            this.MaNV.Name = "MaNV";
+            // 
+            // HoNV
+            // 
+            this.HoNV.DataPropertyName = "HONV";
+            this.HoNV.HeaderText = "Họ";
+            this.HoNV.Name = "HoNV";
+            // 
+            // TenNV
+            // 
+            this.TenNV.DataPropertyName = "TENNV";
+            this.TenNV.HeaderText = "Tên";
+            this.TenNV.Name = "TenNV";
+            // 
+            // DiaChiNV
+            // 
+            this.DiaChiNV.DataPropertyName = "DIACHINV";
+            this.DiaChiNV.HeaderText = "Địa chỉ";
+            this.DiaChiNV.Name = "DiaChiNV";
+            // 
+            // GTNV
+            // 
+            this.GTNV.DataPropertyName = "GTNV";
+            this.GTNV.HeaderText = "Giới tính";
+            this.GTNV.Name = "GTNV";
+            // 
+            // NSNV
+            // 
+            this.NSNV.DataPropertyName = "NSNV";
+            this.NSNV.HeaderText = "Ngày sinh";
+            this.NSNV.Name = "NSNV";
+            // 
+            // SDTNV
+            // 
+            this.SDTNV.DataPropertyName = "SDTNV";
+            this.SDTNV.HeaderText = "Số điện thoại";
+            this.SDTNV.Name = "SDTNV";
             // 
             // buttonX3
             // 
             this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX3.Location = new System.Drawing.Point(885, 497);
+            this.buttonX3.Location = new System.Drawing.Point(868, 604);
             this.buttonX3.Name = "buttonX3";
             this.buttonX3.Size = new System.Drawing.Size(75, 34);
             this.buttonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -110,7 +153,7 @@
             // 
             this.btnSua.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnSua.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSua.Location = new System.Drawing.Point(794, 497);
+            this.btnSua.Location = new System.Drawing.Point(787, 604);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 34);
             this.btnSua.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -209,10 +252,6 @@
             this.labelX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
             this.labelX1.TabIndex = 152;
             this.labelX1.Text = "Giới Tính";
-            // 
-            // ucKhachHangBindingSource
-            // 
-            this.ucKhachHangBindingSource.DataSource = typeof(btlCSDL.UI.QTV.ucKhachHang);
             // 
             // panelEx8
             // 
@@ -457,14 +496,14 @@
             this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.panelEx1.Style.GradientAngle = 90;
             this.panelEx1.TabIndex = 139;
-            this.panelEx1.Text = "Thông Tin Nhân Viên";
+            this.panelEx1.Text = "THÔNG TIN NHÂN VIÊN ĐANG LÀM VIỆC";
             // 
             // btnThem
             // 
             this.btnThem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnThem.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnThem.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(703, 497);
+            this.btnThem.Location = new System.Drawing.Point(706, 604);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 34);
             this.btnThem.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -473,47 +512,9 @@
             this.btnThem.TabIndex = 159;
             this.btnThem.Text = "Thêm";
             // 
-            // MaNV
+            // ucKhachHangBindingSource
             // 
-            this.MaNV.DataPropertyName = "MANV";
-            this.MaNV.HeaderText = "Mã nhân viên";
-            this.MaNV.Name = "MaNV";
-            // 
-            // HoNV
-            // 
-            this.HoNV.DataPropertyName = "HONV";
-            this.HoNV.HeaderText = "Họ";
-            this.HoNV.Name = "HoNV";
-            // 
-            // TenNV
-            // 
-            this.TenNV.DataPropertyName = "TENNV";
-            this.TenNV.HeaderText = "Tên";
-            this.TenNV.Name = "TenNV";
-            // 
-            // DiaChiNV
-            // 
-            this.DiaChiNV.DataPropertyName = "DIACHINV";
-            this.DiaChiNV.HeaderText = "Địa chỉ";
-            this.DiaChiNV.Name = "DiaChiNV";
-            // 
-            // GTNV
-            // 
-            this.GTNV.DataPropertyName = "GTNV";
-            this.GTNV.HeaderText = "Giới tính";
-            this.GTNV.Name = "GTNV";
-            // 
-            // NSNV
-            // 
-            this.NSNV.DataPropertyName = "NSNV";
-            this.NSNV.HeaderText = "Ngày sinh";
-            this.NSNV.Name = "NSNV";
-            // 
-            // SDTNV
-            // 
-            this.SDTNV.DataPropertyName = "SDTNV";
-            this.SDTNV.HeaderText = "Số điện thoại";
-            this.SDTNV.Name = "SDTNV";
+            this.ucKhachHangBindingSource.DataSource = typeof(btlCSDL.UI.QTV.ucKhachHang);
             // 
             // ucNhanVien
             // 
